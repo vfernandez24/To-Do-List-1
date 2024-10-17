@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <!-- Icon -->
+    <link rel="icon" href="assets/checkList.svg">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Iconos font awesome -->
+    <script src="https://kit.fontawesome.com/16ace90703.js" crossorigin="anonymous"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css"></link>
+    <!-- Scripts -->
+    <script src="app.js" defer></script>
+</head>
+<body id="body">
+    <div class="container">
+        <div class="box">
+            <h2>Lista de tareas<span>📝</span></h2>
+            <div class="input-box">
+                <input type="text" id="input" placeholder="Escribe una tarea">
+                <button onclick=addTarea() id="button">Añadir</button>
+            </div>
+            <ul id="list-container">
+            </ul>
+            <button id="verMasBtn" class="verMasBtn" onclick=showData()>Ver más</button>
+        </div>
+        <div id="verMas" class="box verMas">
+            <h2>Tus datos</h2>
+            <div class="float" id="completados">
+                <div class="grafic">
+                    <div class="progress-circle">
+                        <svg width="108" height="108" viewBox="0 0 36 36">
+                          <!-- Fondo transparente -->
+                          <circle class="circle-bg" cx="18" cy="18" r="16" />
+                          
+                          <!-- Borde con el gradient aplicado -->
+                          <circle id="circle1" class="circle" cx="18" cy="18" r="16" />
+                          
+                          <!-- Texto del porcentaje -->
+                          <text id="porcentajeComplete" x="18" y="18" class="percentage" dy=".3em">70%</text>
+                        </svg>
+                      </div>
+                      
+                      <svg width="0" height="0">
+                        <defs>
+                          <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color: limegreen; stop-opacity: 1" />
+                            <stop offset="100%" style="stop-color: green; stop-opacity: 1" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                </div>
+                <h3>Completadas</h3>
+                <p><span id="completeNumber"></span>/<span id="totalNumber1"></span></p>
+            </div>
+            <div style="margin-left: 2%;" class="float" id="incompletados">
+                <div class="grafic">
+                    <div class="progress-circle">
+                        <svg width="108" height="108" viewBox="0 0 36 36">
+                          <!-- Fondo transparente -->
+                          <circle class="circle-bg" cx="18" cy="18" r="16" />
+                          
+                          <!-- Borde con el gradient aplicado -->
+                          <circle id="circle2" class="circle circle2" cx="18" cy="18" r="16" />
+                          
+                          <!-- Texto del porcentaje -->
+                          <text id="porcentajeIncomplete" x="18" y="18" id="percentage" class="percentage" dy=".3em">30%</text>
+                        </svg>
+                      </div>
+                      
+                      <svg width="0" height="0">
+                        <defs>
+                          <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color: darkred; stop-opacity: 1" />
+                            <stop offset="100%" style="stop-color: crimson; stop-opacity: 1" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      
+                      <p style="display: none;" id="porciento">70%</p>
+                </div>
+                <h3>Incompletadas</h3>
+                <p><span id="incompleteNumber"></span>/<span id="totalNumber2"></span></p>
+            </div>
+        </div>
+    </div>
+    <button class="toggle" onclick=toggleDark()>
+        <i id="buttonDark" class="fa-solid fa-xl fa-moon"></i>
+        <!-- fa-moon = dark -->
+        <!-- fa-sun = light -->
+    </button>
+</body>
+</html>

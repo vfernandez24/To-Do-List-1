@@ -1,0 +1,161 @@
+
+@keyframes progress_0 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 100;
+    }
+}
+@keyframes progress_5 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 95;
+    }
+}
+@keyframes progress_10 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 90;
+    }
+}
+@keyframes progress_15 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 85;
+    }
+}
+@keyframes progress_20 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 80;
+    }
+}
+@keyframes progress_25 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 75;
+    }
+}
+@keyframes progress_30 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 70;
+    }
+}
+@keyframes progress_35 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 65;
+    }
+}
+@keyframes progress_40 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 60;
+    }
+}
+@keyframes progress_50 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 50;
+    }
+}
+@keyframes progress_55 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 45;
+    }
+}
+@keyframes progress_60 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 40;
+    }
+}
+@keyframes progress_65 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 35;
+    }
+}
+@keyframes progress_70 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 30;
+    }
+}
+@keyframes progress_75 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 25;
+    }
+}
+@keyframes progress_80 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 20;
+    }
+}
+@keyframes progress_85 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 15;
+    }
+}
+@keyframes progress_90 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 10;
+    }
+}
+@keyframes progress_95 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 5;
+    }
+}
+@keyframes progress_100 {
+    from {
+        stroke-dashoffset: 100;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}

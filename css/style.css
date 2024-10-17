@@ -1,0 +1,419 @@
+@import url(root.css);
+@import url(animation.css);
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    padding: 5px 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue2);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue2-hover);
+}
+
+::-webkit-scrollbar-track {
+    background-color:transparent;
+    padding: 5px 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Inter', sans-serif;
+    box-sizing: border-box;
+    transition: background .5s ease;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.box {
+    width: 500px;
+    height: min-content;
+    max-height: 400px;
+    background-color: var(--background);
+    border-radius: 40px;
+    position: relative;
+    padding: 20px;
+}
+
+.box h2 {
+    text-align: center;
+    user-select: none;
+    padding: 0 0 20px;
+}
+
+.box h2 span {
+    margin-left: 10px;
+}
+
+.input-box {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+    background-color: var(--hover);
+    margin-bottom: 20px;
+    user-select: none;
+}
+
+input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 40px;
+    padding: 20px;
+    font-size: 17px;
+    line-height: 40px;
+}
+
+button {
+    background-color: var(--blue2);
+    height: 40px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    color: var(--background);
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+button:hover {
+    background-color: var(--blue2-hover);
+}
+
+ul {
+    max-height: 220px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+ul li {
+    list-style: none;
+    padding: 20px 40px 10px;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+ul li p {
+    all: inherit;
+    user-select: text;
+}
+
+ul li::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    border-radius: 50%;
+    background-image: url(../assets/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    filter: invert(0);
+}
+
+ul li.checked {
+    text-decoration: line-through;
+    color: var(--checked);
+}
+
+ul li.checked::before {
+    background-image: url(../assets/checked.png);
+    filter: invert(0);
+}
+
+ul li span {
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: .5s ease;
+}
+
+ul li span:hover {
+    background-color: var(--hover);
+}
+
+.verMasBtn {
+    all: unset;
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0;
+    text-align: center;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    user-select: none;
+    cursor: pointer;
+    scale: 1;
+}
+
+.verMasBtn:hover {
+    background-color: transparent;
+    text-decoration: underline;
+    color: #000b3b;
+}
+
+.toggle {
+    position: fixed;
+    background: var(--background);
+    margin: 0;
+    padding: 0;
+    color: var(--background-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+}
+
+.toggle:hover {
+    background-color: var(--hover);
+    scale: 1.05;
+}
+
+i {
+    all: unset;
+    color: var(--background-dark);
+}
+
+#verMas {
+    display: none;
+    height: 400px;
+}
+
+#verMas.show {
+    display: block;
+}
+
+.float {
+    float: left;
+    width: 49%;
+    height: 300px;
+    background: var(--hover);
+    border-radius: 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    transition: all .3s ease;
+}
+
+.float:hover {
+    scale: 1.05;
+}
+
+#completados {
+    background-color: #a3e4a3;
+}
+
+#completados:hover {
+    background: #8cf08c;
+}
+
+#incompletados {
+    background-color: #e09191;
+}
+
+#incompletados:hover {
+    background-color: #e26d6d;
+}
+
+.grafic {
+    width: 108px;
+    height: 108px;
+    margin-top: 30px;
+    display: grid;
+    place-items: center;
+}
+
+
+.progress-circle {
+    position: relative;
+    width: 108px;
+    height: 108px;
+    background: transparent; /* Fondo transparente */
+  }
+
+  /* Fondo circular transparente (solo trazo gris) */
+  .circle-bg {
+    fill: none;
+    stroke: var(--hover);
+    stroke-width: 4; /* Grosor del fondo */
+  }
+
+  /* Borde circular con gradient */
+  .circle {
+    fill: none;
+    stroke-width: 4; /* Aumentar el grosor del borde */
+    stroke: url(#gradient); /* Aplica el degradado */
+    stroke-dasharray: 100; /* Longitud total del círculo */
+    stroke-dashoffset: 100; /* Comienza oculto */
+    stroke-linecap: round;
+    transform: rotate(-90deg); /* Rotación para que empiece en la parte superior */
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset .5s ease-in-out;
+  }
+
+  .circle2 {
+    stroke: url(#gradient2)
+  }
+
+  
+  /* Texto centrado del porcentaje */
+  .percentage {
+    fill: var(--text);
+    font-family: Arial, sans-serif;
+    font-size: 6px;
+    text-anchor: middle; /* Centrando horizontalmente */
+    align-content: center;
+    user-select: none;
+  }
+
+  /* Degradado lineal verde aplicado al borde */
+  svg defs {
+      position: absolute;
+    }
+    
+.float h3{
+    padding: 30px 0;
+}
+
+
+
+
+
+
+/*! TEMA OSCURO */
+
+body.dark * {
+    color: var(--text-dark);
+}
+
+body.dark .container {
+    background: var(--gradient-dark);
+}
+
+body.dark .box {
+    background-color: var(--background-dark);
+}
+
+body.dark .input-box {
+    background-color: var(--hover-dark);
+}
+
+body.dark input::placeholder {
+    color: var(--background);
+}
+
+body.dark button {
+    background-color: var(--blue2-dark);
+    color: var(--text-dark);
+}
+
+body.dark button:hover {
+    background-color: var(--blue2-hover-dark);
+}
+
+body.dark ul li.checked {
+    color: var(--checked-dark);
+}
+
+body.dark span:hover {
+    background-color: var(--hover-dark);
+}
+
+body.dark a {
+    color: var(--text-dark);
+}
+
+body.dark a:hover {
+    color: var(--blue2);
+}
+
+body.dark .toggle {
+    background-color: var(--background-dark);
+}
+
+body.dark .toggle:hover {
+    background-color: var(--hover-dark);
+}
+
+body.dark i {
+    color: var(--background);
+}
+
+body.dark .verMasBtn {
+    background-color: transparent;
+    color: var(--text-dark);
+}
+
+body.dark .verMasBtn:hover {
+    background-color: transparent;
+    color: var(--blue1-dark);
+}
+
+body.dark #completados {
+    background-color: #134e138c;
+}
+
+body.dark #completados:hover {
+    background-color: #1777178c;
+}
+
+body.dark #incompletados {
+    background-color: #8320208c;
+}
+
+body.dark #incompletados:hover {
+    background-color: #ac20208c;
+}
+
+body.dark .percentage {
+    fill: var(--text-dark);
+}
+
+body.dark .circle-bg {
+    stroke: var(--hover-dark);
+}
