@@ -1,4 +1,4 @@
 # To-Do-List-1
 
->[!warning]
->No usar en dispositivos móviles
+>[!tip]
+>Usar dispositivos con 800px de width o usar el modo horizontal
